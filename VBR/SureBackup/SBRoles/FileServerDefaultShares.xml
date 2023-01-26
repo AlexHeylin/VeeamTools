@@ -1,0 +1,33 @@
+<SbRoleOptions>
+ <Role>
+   <SbRole>
+     <Id>98D63239-77D4-49C9-B84C-15133A29106C</Id>
+     <Name>File Shares (Default)</Name>
+   </SbRole>
+ </Role>
+ <Options>
+   <SbVerificationOptions>
+     <ActualMemoryPercent>25</ActualMemoryPercent>
+     <MaxBootTimeoutSec>2100</MaxBootTimeoutSec>
+     <AppInitDelaySec>240</AppInitDelaySec>
+     <TestScripts>
+       <TestScripts>
+         <TestScript>
+           <Name>File Share C$</Name>
+           <Type>Custom</Type>
+           <TestScriptFilePath>FileServerTest.bat</TestScriptFilePath>
+           <Arguments>%vm_ip% C$</Arguments>
+         </TestScript>
+         <TestScript>
+           <Name>File Share Admin$</Name>
+           <Type>Custom</Type>
+           <TestScriptFilePath>FileServerTest.bat</TestScriptFilePath>
+           <Arguments>%vm_ip% Admin$</Arguments>
+         </TestScript>
+       </TestScripts>
+     </TestScripts>
+     <HeartbeatEnabled>True</HeartbeatEnabled>
+     <PingEnabled>True</PingEnabled>
+   </SbVerificationOptions>
+ </Options>
+</SbRoleOptions>
